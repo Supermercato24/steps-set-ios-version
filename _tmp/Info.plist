@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Teference</string>
+	<string>BitriseStep</string>
 	<key>CFBundleIdentifier</key>
 	<string>ru.boomik.app</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2</string>
+	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.0</string>
+	<string>1000</string>
 </dict>
 </plist>

@@ -32,26 +32,26 @@ inputs:
   - bundle_version:
     opts:
       title: "Bundle Version to set"
-      summary: "Set the :CFBundleVersion to a specified value. Should be string."
+      summary: "Set the :CFBundleVersion to a specified value. Should be string or empty. If the field is empty, the current version will be used."
       description: |
-        CFBundleVersion e.g.: 1.0.0
-      is_required: true
+        CFBundleVersion e.g.: 42
+      is_required: false
   - bundle_version_short:
     opts:
       title: "Bundle Short Version String to set"
-      summary: "Set the :CFBundleShortVersionString to a specified value. Should be string."
+      summary: "Set the :CFBundleShortVersionString to a specified value. Should be string or empty. If the field is empty, the current short version will be used."
       description: |
-        CFBundleShortVersionString e.g.: 1.0
-      is_required: true
+        CFBundleShortVersionString e.g.: 1.0.0
+      is_required: false
   - version_short_offset:
     opts:
-      title: "Bundle Short Version String Offset"
+      title: "Bundle Version Offset"
       description: |
-        This offset will be added to `Short Version` input's value. If this set - Offset and Short Version must be integer!.
+        This offset will be added to `Version` input's value. If this set - Offset and Version must be integer!.
   - append_version: "false"
     opts:
       title: "Append Version"
-      summary: "It appends to the current CFBundleVersion. e.g. Current version in Info.plist is '1.0.'. After step will be '1.0.YOU_ENTERED_VERSION NAME'"
+      summary: "It appends to the current CFBundleShortVersionString. e.g. Current version in Info.plist is '1.0.'. After step will be '1.0.YOU_ENTERED_VERSION NAME'"
       is_required: true
       value_options:
       - "true"
@@ -59,7 +59,7 @@ inputs:
 outputs:
   - APP_VERSION:
     opts:
-      title: Version (CFBundleVersion from Info.plist)
+      title: Version (CFBundleShortVersionString from Info.plist)
   - APP_BUILD:
     opts:
-      title: Build (CFBundleShortVersionString from Info.plist)
+      title: Build (CFBundleVersion from Info.plist)

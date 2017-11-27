@@ -15,6 +15,13 @@ added to your `.bitrise.secrets.yml` file!*
 
 ### Change log
 
+Version 2.0.0
+* Swapped CFBundleShortVersionString & CFBundleVersion. Now is correct. Sorry
+* Parameters bundle_version & bundle_version_short now optional
+* If need append version dot added automatically
+* Fixes
+
+
 Version 1.1.1
 * Fix append version config bug.
 
