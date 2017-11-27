@@ -28,13 +28,6 @@ project_type_tags:
 # https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
 type_tags:
   - utility
-  - build
-  - utils
-  - xcode
-  - xamarin
-  - ios
-  - info.plist
-  - versioning
 run_if: ".IsCI"
 inputs:
   - info_plist_file:
