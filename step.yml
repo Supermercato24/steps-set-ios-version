@@ -31,6 +31,6 @@ outputs:
   - APP_VERSION:
     opts:
       title: Version (CFBundleShortVersionString from Info.plist)
-  - APP_BUILD:
+  - BUILD_NUMBER:
     opts:
       title: Build (CFBundleVersion from Info.plist)
