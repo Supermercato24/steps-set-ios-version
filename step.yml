@@ -1,26 +1,16 @@
-#
-# A couple of useful guides & docs:
-#
-# - Main Bitrise CLI docs: https://github.com/bitrise-io/bitrise/tree/master/_docs
-# - Step Development Guideline: https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
-# - Bitrise.yml format spec: https://github.com/bitrise-io/bitrise/blob/master/_docs/bitrise-yml-format-spec.md
-# - Bitrise docs: http://devcenter.bitrise.io/
-# - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
-
-
 title: |-
-  Set iOS Info.plist - Bundle Version and Bundle Short Version String
+  Reads iOS Info.plist - Bundle Version and Bundle Short Version String
 summary: |-
-  Sets the Bundle Version and Bundle Short Version String to the specified value, in the target Info.plist file for the next build.
+  Gets the Bundle Version and Bundle Short Version String from the specified Info.plist file.
 description: |-
-  Sets the Bundle Version and Bundle Short Version String to the specified value, in the target Info.plist file for the next build.
-website: https://github.com/BOOMik/steps-set-ios-version
-source_code_url: https://github.com/BOOMik/steps-set-ios-version
-support_url: https://github.com/BOOMik/steps-set-ios-version/issues
+  Gets the Bundle Version and Bundle Short Version String from the specified Info.plist file.
+website: https://github.com/Supermercato24/steps-set-ios-version
+source_code_url: https://github.com/Supermercato24/steps-set-ios-version
+support_url: https://github.com/Supermercato24/steps-set-ios-version/issues
 source:
-  git: https://github.com/BOOMik/steps-set-ios-version.git
+  git: https://github.com/Supermercato24/steps-set-ios-version.git
 host_os_tags:
-  - "osx-10.10"
+  - "osx-10.15"
 project_type_tags:
   - ios
 # Type tags are used for categorizing steps, for easier step discovery in Step Libraries.
@@ -37,33 +27,6 @@ inputs:
       description: |
         Path to the given iOS project's Info.plist file.
       is_required: true
-  - bundle_version:
-    opts:
-      title: "Bundle Version to set"
-      summary: "Set the :CFBundleVersion to a specified value. Should be string or empty. If the field is empty, the current version will be used."
-      description: |
-        CFBundleVersion e.g.: 42
-      is_required: false
-  - bundle_version_short:
-    opts:
-      title: "Bundle Short Version String to set"
-      summary: "Set the :CFBundleShortVersionString to a specified value. Should be string or empty. If the field is empty, the current short version will be used."
-      description: |
-        CFBundleShortVersionString e.g.: 1.0.0
-      is_required: false
-  - version_short_offset:
-    opts:
-      title: "Bundle Version Offset"
-      description: |
-        This offset will be added to `Version` input's value. If this set - Offset and Version must be integer!.
-  - append_version: "false"
-    opts:
-      title: "Append Version"
-      summary: "It appends to the current CFBundleShortVersionString. e.g. Current version in Info.plist is '1.0.'. After step will be '1.0.YOU_ENTERED_VERSION NAME'"
-      is_required: true
-      value_options:
-      - "true"
-      - "false"
 outputs:
   - APP_VERSION:
     opts:
